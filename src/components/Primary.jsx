@@ -1,10 +1,10 @@
 import React from 'react'
 import Current from './Current'
 
-const Primary = () => {
+const Primary = ({data}) => {
   return (
     <>
-      <Current/>
+      <Current data={data}/>
     </>
   )
 }
