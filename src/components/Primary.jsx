@@ -1,9 +1,10 @@
 import React from 'react'
+import Current from './Current'
 
-const Primary = () => {
+const Primary = ({data}) => {
   return (
     <>
-      Primary
+      <Current data={data}/>
     </>
   )
 }
