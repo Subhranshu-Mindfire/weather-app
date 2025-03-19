@@ -22,7 +22,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <div className='bg-white h-75 w-75 m-auto rounded-5 row'>
+    <div className='bg-white h-75 w-75 m-auto rounded-5 row shadow-lg'>
       <div className='col-md-8'>
         <Primary data={data}/>
       </div>
