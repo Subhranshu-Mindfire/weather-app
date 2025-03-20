@@ -2,8 +2,8 @@ import React from 'react'
 import "./Current.css"
 import { useState } from 'react'
 
-const Current = (props) => {
-  console.log(props.data);
+const Current = ({data}) => {
+  console.log(data);
   
   return (
     <>
@@ -14,18 +14,18 @@ const Current = (props) => {
       <div className="bottom d-flex flex-column">
         <div className='text-secondary text-center'>
           <div className="temp">
-            &nbsp;38&deg;
+            &nbsp;{(data?.main?.temp - 273).toFixed(0)}&deg;
           </div>
           <div className="type fs-1">
-            Cloudy
+            {data?.weather?.[0]?.main}
           </div>
         </div>
         <div className="other d-flex justify-content-evenly fs-3 mx-5 text-secondary">
           <div className="wind">
-            <i class="fa-solid fa-wind"></i> 2 kph
+            <i class="fa-solid fa-wind"></i> {data?.wind?.speed} k/h
           </div>
           <div className="humidity">
-            <i class="fa-solid fa-droplet"></i> 90%
+            <i class="fa-solid fa-droplet"></i> {data?.main?.humidity}
           </div>
         </div>
       </div>

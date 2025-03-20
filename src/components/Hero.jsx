@@ -4,7 +4,9 @@ import Secondary from './Secondary'
 
 const Hero = () => {
 
-  const [data, setData] = useState("")
+  const [data, setData] = useState({})
+
+  // const [main, setMain] = useState("")
 
   useEffect(() => {
     const url = "https://api.openweathermap.org/data/2.5/weather?q=bhubaneshwar&appid=a50afa1dcea7286614a3fdecc403bade"
