@@ -1,6 +1,17 @@
 .temp{
   font-size: 160px;
 }
-.type{
 
+.start-25{
+  left: 25%;
 }
+li{
+  cursor: pointer;
+}
+
+input{
+  border:0.5px solid gray;
+  padding: 0px 10px;
+  width: 95%;
+}
+
