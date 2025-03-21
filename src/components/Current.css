@@ -5,8 +5,9 @@
 .start-25{
   left: 25%;
 }
-li{
+li:hover{
   cursor: pointer;
+  background: gray;
 }
 
 input{
