@@ -14,4 +14,7 @@ input{
   padding: 0px 10px;
   width: 95%;
 }
-
+ 
+input::placeholder{
+  font-size: smaller;
+}

@@ -38,7 +38,7 @@ const Current = ({ data, query, setQuery, result, setLat, setLong, hourForecast 
         <input placeholder=' Search For Any City' type="text" className='rounded-4' value={query} onChange={(e) => setQuery(e.target.value)} />
           {query && result ?
             result.map((city) =>
-              <li className="list-unstyled bg-light border d-flex justify-content-between text-dark px-2" onClick={() => {
+              <li className="list-unstyled bg-light-subtle border d-flex justify-content-between text-dark px-2" onClick={() => {
                 setLat(city.lat)
                 setLong(city.lon)
                 setName(city.name)
@@ -58,10 +58,10 @@ const Current = ({ data, query, setQuery, result, setLat, setLong, hourForecast 
       </div>
       <div className="bottom d-flex flex-column">
         <div className='text-secondary text-center'>
-          <div className="temp">
+          <div className="temp mt-4">
             &nbsp;{(data?.main?.temp - 273).toFixed(0)}&deg;
           </div>
-          <div className="type fs-1">
+          <div className="type fs-1 mb-4">
             {data?.weather?.[0]?.main}
           </div>
         </div>

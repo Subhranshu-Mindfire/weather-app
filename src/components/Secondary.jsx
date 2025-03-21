@@ -22,7 +22,7 @@ const Secondary = ({data, hourForecast}) => {
   
   return (
     <>
-      <div className='greetings h1 text-center my-3 text-white mt-5'>
+      <div className='greetings h1 text-center my-3 text-white mt-4'>
         {getMessage()}
       </div>
       <div className="time text-white text-center h2">
@@ -47,7 +47,7 @@ const Secondary = ({data, hourForecast}) => {
         </div>
       </div>
       <div className="hourly">
-        <h3 className='text-center text-white mt-5'>Hourly Forecast</h3>
+        <h3 className='text-center text-white mt-2'>Hourly Forecast</h3>
       </div>
       <div className="d-flex mt-3 flex-wrap mx-3 gap-3 justify-content-center">
 
@@ -55,7 +55,7 @@ const Secondary = ({data, hourForecast}) => {
           (new Date(hour.dt_txt)) > (new Date()) && new Date(hour.dt_txt).getDate("en-US") == new Date().getDate("en-US") ? 
             <div className='card bg-white text-dark py-2 px-4 d-flex flex-column gap-3 text-center'>
               <div className="top">
-                {(new Date(hour.dt_txt)).getHours("en-US")} {(new Date(hour.dt_txt)).getHours("en-US")> 12 ? "PM" : "AM"}
+                {(new Date(hour.dt_txt)).getHours("en-US") < 13 ? (new Date(hour.dt_txt)).getHours("en-US") : ((new Date(hour.dt_txt)).getHours("en-US")) - 12 } {(new Date(hour.dt_txt)).getHours("en-US")> 11 ? "PM" : "AM"}
               </div>
               <div className="middle fs-2">
               &nbsp;{(hour?.main?.temp - 273).toFixed()}&deg;
