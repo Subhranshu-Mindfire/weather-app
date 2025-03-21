@@ -61,7 +61,7 @@ const Current = ({ data, query, setQuery, result, setLat, setLong, hourForecast 
           <div className="temp mt-4">
             &nbsp;{(data?.main?.temp - 273).toFixed(0)}&deg;
           </div>
-          <div className="type fs-1 mb-4">
+          <div className="type fs-1 mb-1">
             {data?.weather?.[0]?.main}
           </div>
         </div>
@@ -75,7 +75,7 @@ const Current = ({ data, query, setQuery, result, setLat, setLong, hourForecast 
         </div>
       </div>
 
-      <div className="weekly mt-5 pt-3">
+      <div className="weekly mt-3 pt-3">
         <div className="d-flex mt-3 flex-wrap mx-3 gap-3 justify-content-center">
           {hourForecast?.list?.map((hour) =>
             (new Date(hour.dt_txt)).getHours("en-US") == 12 ?

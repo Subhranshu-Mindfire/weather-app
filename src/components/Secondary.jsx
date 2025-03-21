@@ -49,7 +49,7 @@ const Secondary = ({data, hourForecast}) => {
       <div className="hourly">
         <h3 className='text-center text-white mt-2'>Hourly Forecast</h3>
       </div>
-      <div className="d-flex mt-3 flex-wrap mx-3 gap-3 justify-content-center">
+      <div className="d-flex mt-3 flex-wrap mx-3 gap-3 justify-content-center pb-3">
 
         {hourForecast?.list?.slice(0,6)?.map((hour)=>
           (new Date(hour.dt_txt)) > (new Date()) && new Date(hour.dt_txt).getDate("en-US") == new Date().getDate("en-US") ? 
