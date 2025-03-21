@@ -95,7 +95,7 @@ const Hero = () => {
   },[long])
 
   return (
-    <div className='bg-white h-75 w-75 m-auto rounded-5 row shadow-lg'>
+    <div className='bg-white w-75 m-auto rounded-5 row shadow-lg'>
       <div className='col-md-8'>
         <Primary data={data} query={query} setQuery={setQuery} result={result} setLat={setLat} setLong={setLong} hourForecast={hourForecast}/>
       </div>
